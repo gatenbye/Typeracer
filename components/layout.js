@@ -23,6 +23,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='shortlink' href='https://www.bredbandskollen.se/' />
 <link rel="alternate" type="application/json+oembed" href="https://www.bredbandskollen.se/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bredbandskollen.se%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://www.bredbandskollen.se/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bredbandskollen.se%2F&#038;format=xml" />
+
+
 <header class="title-bar">
       <div class="grid-container">
         <div class="grid-x align-middle">
@@ -86,7 +88,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   </div>
 </div>
 <div class="measure-actions">
-  <button data-bbk-element="startTest" data-bbk-info="normal" id="mainStartTest" class="button large start-test">Starta mätningen!</button>
+  <button data-bbk-element="startTest" data-bbk-info="normal" id="mainStartTest" class="button large start-test" onClick="changeColor()">Starta mätningen!</button>
   <p class="measure-actions-terms">
     <span class="measure-actions-terms-wrapper">
       Genom att starta mätningen godkänner du <a href="/om/avtalsvillkor/" target="_blank">avtalsvillkoren</a> och att du har tagit del av <a href="/om/om-cookies-och-datalagring/" target="_blank">integritetspolicyn</a>.    </span>
@@ -98,12 +100,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     <div class="y-margin-item" data-bbk-element="progressBarWrapper" style="display: none">
       <div class="bbk-test-progress" data-bbk-element="progressBar" id="mainProgressBar"></div>
     </div>
-    <div class="y-margin-item" data-bbk-element="testResult" style="display: none">
+    <div class="y-margin-item" data-bbk-element="testResult" style="display: none" id="testResult">
       <div class="grid-x grid-margin-x grid-margin-y">
   <div class="cell large-4">
     <div class="card no-margin">
       <div class="card-section">
-        <div class="bbk-test-box download" data-bbk-element="downloadSpeedBox">
+        <div class="bbk-test-box download completed" data-bbk-element="downloadSpeedBox">
           <div class="grid-x grid-margin-x align-bottom">
             <div class="cell medium-shrink">
               <div class="bbk-test-box-icon">
@@ -111,8 +113,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
               </div>
             </div>
             <div class="cell medium-auto">
-              <label class="bbk-test-box-label">Nedladdning</label>
-              <span class="bbk-test-box-result"><span data-bbk-element="downloadSpeedInt">00</span><span>,</span><span data-bbk-element="downloadSpeedDec">00</span> <small>Mbit/s</small></span>
+              <label class="bbk-test-box-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Download</font></font></label>
+              <span class="bbk-test-box-result"><span data-bbk-element="downloadSpeedInt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">104 </font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, </font></font></span><span data-bbk-element="downloadSpeedDec"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">98 </font></font></span> <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mbit/s</font></font></small></span>
             </div>
           </div>
         </div>
@@ -122,7 +124,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   <div class="cell medium-6 large-4">
     <div class="card no-margin">
       <div class="card-section">
-        <div class="bbk-test-box upload" data-bbk-element="uploadSpeedBox">
+        <div class="bbk-test-box upload completed" data-bbk-element="uploadSpeedBox">
           <div class="grid-x grid-margin-x align-bottom">
             <div class="cell medium-shrink">
               <div class="bbk-test-box-icon">
@@ -130,8 +132,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
               </div>
             </div>
             <div class="cell medium-auto">
-              <label class="bbk-test-box-label">Uppladdning</label>
-              <span class="bbk-test-box-result"><span data-bbk-element="uploadSpeedInt">00</span><span>,</span><span data-bbk-element="uploadSpeedDec">00</span> <small>Mbit/s</small></span>
+              <label class="bbk-test-box-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Uploading</font></font></label>
+              <span class="bbk-test-box-result"><span data-bbk-element="uploadSpeedInt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">52 </font></font></span><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">, </font></font></span><span data-bbk-element="uploadSpeedDec"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">60 </font></font></span> <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mbit/s</font></font></small></span>
             </div>
           </div>
         </div>
@@ -141,7 +143,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   <div class="cell medium-6 large-4">
     <div class="card no-margin">
       <div class="card-section">
-        <div class="bbk-test-box latency" data-bbk-element="latencySpeedBox">
+        <div class="bbk-test-box latency completed" data-bbk-element="latencySpeedBox">
           <div class="grid-x grid-margin-x align-bottom">
             <div class="cell medium-shrink">
               <div class="bbk-test-box-icon">
@@ -149,8 +151,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
               </div>
             </div>
             <div class="cell medium-auto">
-              <label class="bbk-test-box-label">Svarstid</label>
-              <span class="bbk-test-box-result"><span data-bbk-element="latencySpeedInt">00</span> <small>ms</small></span>
+              <label class="bbk-test-box-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Response time</font></font></label>
+              <span class="bbk-test-box-result"><span data-bbk-element="latencySpeedInt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">46.82 </font></font></span> <small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ms</font></font></small></span>
             </div>
           </div>
         </div>
@@ -159,6 +161,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   </div>
 </div>
     </div>
+
     <noscript>
       <div class="y-margin-item">
         <div class="alert card">
@@ -228,9 +231,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       <div class="grid-x grid-margin-x">
         <div class="cell medium-12 large-8">
           <div class="y-margin">
-            <div class="y-margin-item" data-bbk-element="measureResult" style="display: none">
-              <div data-bbk-element="measureResultContent" style="display: none">
-  <div data-bbk-element="measureResultView" style="display: none">
+            <div class="y-margin-item" data-bbk-element="measureResult" id="measureResult" style="display: none">
+              <div data-bbk-element="measureResultContent" id="measureResultContent" style="display: none">
+  <div data-bbk-element="measureResultView" id="measureResultView" style="display: none">
     <div class="card no-margin">
       <div class="card-section">
         <div class="y-margin">
@@ -597,7 +600,35 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
       </button>
-    </div>
+    </div>    <script>function changeColor(){
+        var x = document.getElementById("testResult");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("measureResult");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("measureResultContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var x = document.getElementById("measureResultView");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  
+  
+  
+    }</script>
     <style> .main-menu-wrapper .menu .menu-item a {
               color: #191919 !important;
             }
@@ -656,6 +687,18 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
             @media print, screen and (min-width: 64em)
 .hero .hero-content-text {
               padding-left: inherit;
+            }
+            .bbk-choose-language .bbk-language-dropdown label:after {
+              border-color: #ff4069 transparent transparent; 
+            }
+            .bbk-test-box .bbk-test-box-result {
+              font-size: 2.5rem;
+            }
+            .bbk-test-box .bbk-test-box-result small {
+              font-size: 1.01rem;
+            }
+            .card-section {
+              padding-bottom: 3rem;
             }
     </style>
 `;
