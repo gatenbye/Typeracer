@@ -3,8 +3,8 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'El Toka'
-export const siteTitle = 'El Toka'
+const name = 'Broadband for women'
+export const siteTitle = 'Broadband for women'
 const str = `<link rel="alternate" href="https://www.bredbandskollen.se/" hreflang="sv" />
 <link rel="alternate" href="https://www.bredbandskollen.se/en/" hreflang="en" />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
