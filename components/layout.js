@@ -636,7 +636,8 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
               background: white;
             }
             .puff { 
-              padding: 60px;
+              padding-top: 60px;
+              padding-bottom: 60px;
             }
             .puff .puff-icon-picture-frame {
               width: 6.33rem;
