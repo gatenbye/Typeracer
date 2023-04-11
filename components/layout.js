@@ -700,6 +700,14 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
             .card-section {
               padding-bottom: 3rem;
             }
+            .iis-icons-read-more:before {
+              content: "";
+            }
+            .iis-icons-read-more:before {
+    content: "";
+}.iis-icons-clock:before {
+    content: "";
+}
     </style>
 `;
 
