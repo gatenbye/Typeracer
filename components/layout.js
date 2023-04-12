@@ -311,6 +311,23 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                   </div>
                 </div>
               </article>
+              <article class="card">
+                <div class="card-section">
+                  <div class="grid-x grid-margin-x">
+
+                                          <div class="cell shrink">
+                        <img width="50" height="50" src="https://www.bredbandskollen.se/app/uploads/2019/05/stiftelsen-1-50x50.png" class="attachment-card size-card wp-post-image" alt="" loading="lazy" srcset="https://www.bredbandskollen.se/app/uploads/2019/05/stiftelsen-1-50x50.png 50w, https://www.bredbandskollen.se/app/uploads/2019/05/stiftelsen-1-150x150.png 150w, https://www.bredbandskollen.se/app/uploads/2019/05/stiftelsen-1-300x300.png 300w, https://www.bredbandskollen.se/app/uploads/2019/05/stiftelsen-1.png 400w" sizes="(max-width: 50px) 100vw, 50px" title="" style="">                     </div>
+                    
+                    <div class="cell auto">
+                      <h1 class="h3"><strong><a href="https://www.bredbandskollen.se/blog/2022/04/12/om-du-kor-betaversioner-av-operativsystem-och-eller-tjanster/">Långsamma internethastigheter kan begränsa din förmåga att arbeta effektivt</a></strong></h1>
+                      <p>
+Sedan 2010 har Finlands transport- och kommunikationsministerium i inlandet garanterat minst 1 mbit/s till varje medborgare.</p>
+<p>Men 1 mbit/s är ganska litet med dagens standarder, distanspendling på en 1 mbit/s-linje kommer inte att vara smidig eftersom uppladdningshastigheterna tenderar att vara lägre och krävs för streaming av video.</p>
+<p>Läs vår guide om hur du tolkar dina resultat för mer information.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
                             <article class="card">
                 <div class="card-section">
                   <div class="grid-x grid-margin-x">
@@ -600,35 +617,41 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
       </button>
-    </div>    <script>function changeColor(){
-        var x = document.getElementById("testResult");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var x = document.getElementById("measureResult");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var x = document.getElementById("measureResultContent");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var x = document.getElementById("measureResultView");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  
-  
-  
-    }</script>
+    </div>
+      <script>
+        function changeColor(){
+          var x = document.getElementById("testResult");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+          var x = document.getElementById("measureResult");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+          var x = document.getElementById("measureResultContent");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+          var x = document.getElementById("measureResultView");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        window.onload = function() {
+    var anchors = document.getElementsByTagName("a");
+    for (var i = 0; i < anchors.length; i++) {
+        anchors[i].onclick = function() {return false;};
+    }
+};
+      </script>
     <style> .main-menu-wrapper .menu .menu-item a {
               color: #191919 !important;
             }
@@ -653,11 +676,11 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
             .hero-content-text {
               color: inherit !important;
             }
-            .button.start-test:not(.alert) {
+            .button:not(.alert) {
               background: #ff4069 !important; 
               color: white !important;
             }
-            .button.start-test:not(.alert):hover {
+            .button:not(.alert):hover {
               color: rgba(255, 255, 255, 0.75) !important;
             }
             .bbk-icon-nav-globe:before {
@@ -692,22 +715,25 @@ Om du testar nya funktioner som inte är släppta publikt och upptäcker att Bre
               border-color: #ff4069 transparent transparent; 
             }
             .bbk-test-box .bbk-test-box-result {
-              font-size: 2.5rem;
+              font-size: 2.5rem !important;
             }
             .bbk-test-box .bbk-test-box-result small {
-              font-size: 1.01rem;
+              font-size: 1.01rem !important;
             }
-            .card-section {
-              padding-bottom: 3rem;
+            @media screen and (min-width: 1024px) {
+
+              .card-section {
+                padding-bottom: 3rem;
+              }
             }
             .iis-icons-read-more:before {
               content: "";
             }
             .iis-icons-read-more:before {
-    content: "";
-}.iis-icons-clock:before {
-    content: "";
-}
+                content: "";
+            }.iis-icons-clock:before {
+                content: "";
+            }
     </style>
 `;
 
