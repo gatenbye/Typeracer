@@ -321,7 +321,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                     <div class="cell auto">
                       <h1 class="h3"><strong><a href="https://www.bredbandskollen.se/blog/2022/04/12/om-du-kor-betaversioner-av-operativsystem-och-eller-tjanster/">Långsamma internethastigheter kan begränsa din förmåga att arbeta effektivt</a></strong></h1>
                       <p>
-Sedan 2010 har Finlands transport- och kommunikationsministerium i inlandet garanterat minst 1 mbit/s till varje medborgare.</p>
+Sedan 2010 har Finlands transport- och kommunikationsministerium garanterat minst 1 mbit/s till varje medborgare.</p>
 <p>Men 1 mbit/s är ganska litet med dagens standarder, distanspendling på en 1 mbit/s-linje kommer inte att vara smidig eftersom uppladdningshastigheterna tenderar att vara lägre och krävs för streaming av video.</p>
 <p>Läs vår guide om hur du tolkar dina resultat för mer information.</p>
                     </div>
